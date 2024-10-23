@@ -1,0 +1,21 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.lista_menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+.titulo_conteudo {
+    margin-top: 30px;
+}
