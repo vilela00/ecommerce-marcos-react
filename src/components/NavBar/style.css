@@ -7,15 +7,29 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-top: 10px;
-    padding: 20px;
+    padding: 8px 30px 8px 30px !important;
+    background-color: #eeeeee;
 }
 .lista_menu {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 10px;
+    padding: 0;
 }
 .titulo_conteudo {
     margin-top: 30px;
+}
+.botao_menu {
+    width: 120px;
+    border-radius: 12px !important;
+}
+.logo {
+    width: 100px;
+}
+.container_user {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }

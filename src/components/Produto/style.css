@@ -1,5 +1,41 @@
 .produto {
-    border: solid 1px black;
-    padding: 20px;
+    box-shadow:
+    rgba(0,0,0,0.1) 0 2px 2px,
+    rgba(0,0,0,0.1) 0 4px 4px,
+    rgba(0,0,0,0.1) 0 8px 8px,
+    rgba(0,0,0,0.1) 0 16px 16px;
     border-radius: 5px;
+    width: 25%;
+    height: 100%;
+    padding: 0 !important;
+}
+.produto img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.container_info {
+    padding: 20px;
+}
+.container_botoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 10px 0;
+}
+.container_botoes button {
+    width: 80%;
+}
+.container_info_botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.preco {
+    text-decoration: line-through;
+}
+.container_preco {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }

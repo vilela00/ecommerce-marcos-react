@@ -1,0 +1,70 @@
+.footer {
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+.faixa_footer {
+    padding: 0 0 12px 0;
+}
+.faixa_footer p {
+    margin: 0;
+    font-size: 12px;
+    font-style: italic;
+}
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+.news p {
+    margin: 0;
+}
+.container_input_news {
+    display: flex;
+    gap: 10px;
+}
+.container_input_news .botao_news {
+    width: 120px;
+    font-size: 12px;
+}
+.input_news {
+    width: 300px;
+}
+.lista_footer {
+    padding: 0;
+    margin: 0;
+}
+.menu_footer {
+    display: flex;
+    gap: 80px;
+}
+.container_menu_footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+.container_forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container_icons {
+    display: flex;
+    gap: 10px;
+}
+.container_avaliacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.estrelas {
+    display: flex;
+    gap: 5px;
+}
+.container_footer {
+    display: flex;
+    gap: 40px;
+}

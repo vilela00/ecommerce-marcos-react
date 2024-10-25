@@ -1,0 +1,14 @@
+.quantidade_cart {
+    width: 15px;
+    height: 15px;
+    background-color: brown;
+    border-radius: 50px;
+    font-size: 9px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 18px;
+    margin-top: -32px;
+}

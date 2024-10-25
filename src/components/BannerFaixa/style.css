@@ -1,0 +1,26 @@
+.container_oferta {
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    padding: 12px;
+    font-style: italic;
+    align-items: center;
+}
+.container_oferta p {
+    margin: 0;
+}
+.icon_frame {
+    border: black solid 2px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_ofertas {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    margin-top: 12px;
+}
