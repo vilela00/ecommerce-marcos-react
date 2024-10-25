@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.lista_produtos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+}
