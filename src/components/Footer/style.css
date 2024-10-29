@@ -35,6 +35,7 @@
 .lista_footer {
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 .menu_footer {
     display: flex;

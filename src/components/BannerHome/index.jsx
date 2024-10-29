@@ -1,6 +1,7 @@
 import banner1 from '../img/b1.jpg'
 import banner2 from '../img/b2.jpg'
 import banner3 from '../img/b3.jpg'
+import { Carousel } from 'bootstrap'
 
 function BannerHome () {
     return (

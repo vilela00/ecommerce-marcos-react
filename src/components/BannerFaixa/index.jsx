@@ -9,6 +9,7 @@ function BannerFaixa () {
         <div>
             <div className='container_ofertas'>
                 <div className='container_oferta'>
+                    <div className='barra_lateral'></div>
                     <div className='icon_frame'>
                         <LiaShippingFastSolid size={25} />
                     </div>
@@ -18,6 +19,7 @@ function BannerFaixa () {
                     </div>
                 </div>
                 <div className='container_oferta'>
+                <div className='barra_lateral'></div>
                     <div className='icon_frame'>
                         <FaCreditCard size={25} />
                     </div>
@@ -27,6 +29,7 @@ function BannerFaixa () {
                     </div>
                 </div>
                 <div className='container_oferta'>
+                <div className='barra_lateral'></div>
                     <div className='icon_frame'>
                         <RiDiscountPercentLine size={25} />
                     </div>
@@ -36,6 +39,7 @@ function BannerFaixa () {
                     </div>
                 </div>
                 <div className='container_oferta'>
+                <div className='barra_lateral'></div>
                     <div className='icon_frame'>
                         <AiOutlineSafety size={25} />
                     </div>

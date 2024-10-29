@@ -39,3 +39,7 @@
     gap: 10px;
     justify-content: center;
 }
+.d-block, .d-none {
+    border: none;
+    background-color: transparent;
+}

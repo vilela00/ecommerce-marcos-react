@@ -5,14 +5,15 @@
     padding: 12px;
     font-style: italic;
     align-items: center;
+    width: 25%;
 }
 .container_oferta p {
     margin: 0;
 }
 .icon_frame {
     border: black solid 2px;
-    border-radius: 100px;
-    width: 50px;
+    border-radius: 50px;
+    min-width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -20,7 +21,12 @@
 }
 .container_ofertas {
     display: flex;
-    gap: 15px;
     justify-content: space-around;
-    margin-top: 12px;
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+}
+.barra_lateral {
+    border-left: rgb(121, 121, 121) solid 2px;
+    height: 45px;
 }

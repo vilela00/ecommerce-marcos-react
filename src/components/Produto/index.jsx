@@ -1,9 +1,27 @@
 import "./style.css"
 
 function Produto (props) {
+
+    /*function changeClass() {
+
+        let changeClass1 = document.getElementById(`imagem-${props.titulo}`)
+        changeClass1.className = 'd-none'
+        let changeClass2 = document.getElementById(`imagem2-${props.titulo}`)
+        changeClass2.className = 'd-block'
+    }
+
+    function changeClass2() {
+
+        let changeClass1 = document.getElementById(`imagem-${props.titulo}`)
+        changeClass1.className = 'd-block'
+        let changeClass2 = document.getElementById(`imagem2-${props.titulo}`)
+        changeClass2.className = 'd-none'
+    }*/
+
     return (
         <div className = "produto container-fluid">
-            <img src = {props.imagem} />
+            <button id={`imagem-${props.id}`} className="d-block"><img src = {props.imagem} /></button>
+            <button id={`imagem2-${props.id}`} className="d-none"><img src = {props.imagem2} /></button>
                 <div className="container_info">
                     <h4>{props.titulo}</h4>
                     <div className="container_preco">
