@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import AvaliacoesHome from './components/AvaliacoesHome';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Contador from './components/ItemCount';
+import Carrinho from './components/ItemListContainer';
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
       <ListaProdutos />
 
       <AvaliacoesHome />
+
+      <Carrinho />
+
+      <Contador />
 
       <Footer />
 

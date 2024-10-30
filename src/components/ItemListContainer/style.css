@@ -1,0 +1,91 @@
+#modal {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    left: calc(100% - 600px);
+    margin-top: 20px;
+}
+
+#modal::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 600px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 8px 0 0 8px;
+}
+
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #747474 solid 0.1px;
+}
+
+.titulo_modal {
+    padding: 10px 0 10px 16px;
+}
+
+.botao_x {
+    padding: 1px 3px 0 0;
+}
+
+.modal_body {
+    padding: 15px;
+    height: 100%;
+}
+
+.modal_footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-top: #747474 solid 0.1px;
+    padding: 8px;
+    gap: 10px;
+}
+
+.modal1 .close_x {
+    padding: 0;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+}
+.container_produto_modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.quantidade_modal, .valor_modal {
+    width: 25%;
+}
+.imagem_produto_modal {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+} 
+.imagem_produto_modal p {
+    width: 60%;
+    font-size: 14px;
+}
+.headline_produtos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: #747474 solid 1px;
+}
+.headline_produtos h6 {
+    margin-bottom: 16px;
+}
+.valor_modal p {
+    margin: 0;
+}
