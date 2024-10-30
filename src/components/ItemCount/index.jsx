@@ -21,8 +21,7 @@ function Contador () {
                 }>
                     <FaMinus size={15}/>
                 </button>
-
-                <input id="quantidade" className="input_quantidade" type="text" onChange={() => setQuantidade (quantidade)} value={quantidade} />
+                <input id={"quantidade"}className="input_quantidade" type="text" onChange={ (e) => setQuantidade(Number(e.target.value)) } value={quantidade} />
                 <button className="btn_quantidade" onClick={() => setQuantidade (quantidade + 1)}><FaPlus size={15}/></button>
             </div>
         </div>
