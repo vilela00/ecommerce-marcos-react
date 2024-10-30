@@ -1,27 +1,20 @@
+import { useState, useEffect } from "react"
 import "./style.css"
 
 function Produto (props) {
 
-    /*function changeClass() {
+    const [name, setName] = useState(props.imagem)
 
-        let changeClass1 = document.getElementById(`imagem-${props.titulo}`)
-        changeClass1.className = 'd-none'
-        let changeClass2 = document.getElementById(`imagem2-${props.titulo}`)
-        changeClass2.className = 'd-block'
-    }
-
-    function changeClass2() {
-
-        let changeClass1 = document.getElementById(`imagem-${props.titulo}`)
-        changeClass1.className = 'd-block'
-        let changeClass2 = document.getElementById(`imagem2-${props.titulo}`)
-        changeClass2.className = 'd-none'
-    }*/
+    useEffect(() => {
+        console.log('Renderiza sempre que montar depois de executar tudo - usado bastante pra chamar API')
+    }, [])
+    useEffect(() => {
+        console.log('Renderiza sempre que montar na variavel definida (podem ser varias) depois que executar tudo')
+    }, [name])
 
     return (
         <div className = "produto container-fluid">
-            <button id={`imagem-${props.id}`} className="d-block"><img src = {props.imagem} /></button>
-            <button id={`imagem2-${props.id}`} className="d-none"><img src = {props.imagem2} /></button>
+            <button className="d-block"><img src = {name} onMouseOver={() => setName(props.imagem2)} onMouseOut={() => setName(props.imagem)} /></button>
                 <div className="container_info">
                     <h4>{props.titulo}</h4>
                     <div className="container_preco">

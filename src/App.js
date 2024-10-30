@@ -3,12 +3,11 @@ import './App.css';
 import NavBar from './components/NavBar';
 import BannerHome from './components/BannerHome'
 import BannerFaixa from './components/BannerFaixa';
-import ItemListContainer from './components/ItemListContainer'
+import ListaProdutos from './components/ListaProdutos';
 import Footer from './components/Footer';
 import AvaliacoesHome from './components/AvaliacoesHome';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
 
       <BannerFaixa />
 
-      <ItemListContainer />
+      <ListaProdutos />
 
       <AvaliacoesHome />
 
