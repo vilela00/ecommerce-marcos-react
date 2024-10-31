@@ -10,6 +10,7 @@ import AvaliacoesHome from './components/AvaliacoesHome';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Contador from './components/ItemCount';
 import Carrinho from './components/ItemListContainer';
+import CartWidget from './components/Widgets/CartWidget';
 
 function App() {
   return (
@@ -23,8 +24,6 @@ function App() {
       <ListaProdutos />
 
       <AvaliacoesHome />
-
-      <Carrinho />
 
       <Contador />
 

@@ -1,3 +1,9 @@
+.container_modal {
+    position: fixed;
+    right: 0;
+    top: 70px;
+    z-index: 5;
+}
 #modal {
     border: none;
     background-color: transparent;

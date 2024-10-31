@@ -5,15 +5,14 @@ import './style.css'
 
 const fecharModal = document.getElementById('modal')
 
-function Carrinho () {
+function Carrinho ( {onClose}) {
     return (
         <div className='container_modal'>
-            <section className="modal_carrinho">
-                <dialog className="modal_lateral" id="modal">
+            <section className="modal_carrinho" id='modal'>
                 <div className="modal1">
                     <div className="modal_header">
                         <h4 className="titulo_modal">Seu Carrinho de Compras</h4>
-                        <div className="botao_x"><button id='close_x' className="btn btn-secondary close_x" onClick={() => fecharModal.close()}>X</button></div>
+                        <div className="botao_x"><button id='close_x' className="btn btn-secondary close_x" onClick={onClose}>X</button></div>
                     </div>
                     <div className="modal_body" id="produto_modal">
                         <div className='headline_produtos'>
@@ -36,11 +35,10 @@ function Carrinho () {
                     </div>
                     <div id="valorTotal"></div>
                     <div className="modal_footer">
-                        <button id='close' className="btn btn-secondary close">Continuar Comprando</button>
+                        <button id='close' className="btn btn-secondary close" onClick={onClose}>Continuar Comprando</button>
                         <button className="btn btn-primary close" id="comprar">Finalizar Compra</button>
                     </div>                
                 </div>
-                </dialog>
             </section>
         </div>
     )
