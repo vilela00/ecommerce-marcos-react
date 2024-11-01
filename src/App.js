@@ -26,8 +26,6 @@ function App() {
 
       <AvaliacoesHome />
 
-      <Contador />
-
       <Footer />
 
       {/*<div className="lista_produtos">

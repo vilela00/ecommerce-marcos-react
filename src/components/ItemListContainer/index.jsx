@@ -5,6 +5,7 @@ import './style.css'
 
 function Carrinho ( {onClose}) {
     return (
+        <div className='teste_blur'>
         <div className='container_modal'>
             <section className="modal_carrinho" id='modal'>
                 <div className="modal1">
@@ -38,6 +39,7 @@ function Carrinho ( {onClose}) {
                     </div>                
                 </div>
             </section>
+        </div>
         </div>
     )
 }
