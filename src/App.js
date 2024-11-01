@@ -15,6 +15,7 @@ import CartWidget from './components/Widgets/CartWidget';
 function App() {
   return (
     <div className="App">
+      
       <NavBar />
 
       <BannerHome />
