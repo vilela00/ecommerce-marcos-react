@@ -101,13 +101,13 @@ function ListaProdutos () {
     return (
         <div>
             <div className='lista_produtos'>
-                {vitrine_principal.map((produto) => <li key={produto.id}><Produto id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} /></li>)}
+                {vitrine_principal.map((produto) => <Produto key = {produto.id} id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} />)}
             </div>
             <div className='container_banner_central'>
                 <BannerCentral />
             </div>
             <div className='lista_produtos'>
-                {vitrine_secundaria.map((produto) => <li key={produto.id}><Produto id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} /></li>)}
+                {vitrine_secundaria.map((produto) => <Produto key = {produto.id} id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} />)}
             </div>
         </div>
     )

@@ -3,8 +3,6 @@ import Contador from '../ItemCount'
 
 import './style.css'
 
-const fecharModal = document.getElementById('modal')
-
 function Carrinho ( {onClose}) {
     return (
         <div className='container_modal'>

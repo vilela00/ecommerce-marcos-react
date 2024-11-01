@@ -1,16 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import "./style.css"
 
 function Produto (props) {
 
     const [name, setName] = useState(props.imagem)
-
-    useEffect(() => {
-        console.log('Renderiza sempre que montar depois de executar tudo - usado bastante pra chamar API')
-    }, [])
-    useEffect(() => {
-        console.log('Renderiza sempre que montar na variavel definida (podem ser varias) depois que executar tudo')
-    }, [name])
 
     return (
         <div className = "produto container-fluid">

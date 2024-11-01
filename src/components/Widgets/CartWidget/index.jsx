@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './style.css'
 import { LuShoppingCart } from "react-icons/lu";
 import DisplayQuantidade from '../../DisplayQuantidade'
@@ -11,10 +11,6 @@ function CartWidget () {
 
     const [quantidade, setQuantidade] = useState (2)
     const [showModal, setShowModal] = useState (false)
-
-    useEffect (() => {
-        console.log('teste')
-    },[quantidade])
 
     return (
         <div className="container_cart"> 

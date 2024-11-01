@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import './style.css'
@@ -6,10 +6,6 @@ import './style.css'
 function Contador () {
 
     const [quantidade, setQuantidade] = useState (1)
-
-    useEffect (() => {
-        console.log(quantidade)
-    }, [quantidade])
 
     return (
         <div className="container_contador">
