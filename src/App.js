@@ -3,15 +3,13 @@ import './App.css';
 import NavBar from './components/NavBar';
 import BannerHome from './components/BannerHome'
 import BannerFaixa from './components/BannerFaixa';
-import ListaProdutos from './components/ListaProdutos';
+import ListaProdutos from './components/ItemListContainer';
 import Footer from './components/Footer';
 import AvaliacoesHome from './components/AvaliacoesHome';
+import BannerTop from './components/BannerTop';
+import DetalheProduto from './components/ItemDetailContainer';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Contador from './components/ItemCount';
-import Carrinho from './components/ItemListContainer';
-import CartWidget from './components/Widgets/CartWidget';
-import BannerTop from './components/BannerTop';
 
 function App() {
   return (
@@ -20,15 +18,17 @@ function App() {
       
       <NavBar />
 
-      <BannerHome />
+      <DetalheProduto />
+
+      <Footer />
+      
+      {/*<BannerHome />
 
       <BannerFaixa />
 
       <ListaProdutos />
 
       <AvaliacoesHome />
-
-      <Footer />
 
       {/*<div className="lista_produtos">
           {

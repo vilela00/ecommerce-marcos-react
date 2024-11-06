@@ -2,6 +2,10 @@
     background-color: #1b1b1b;
     color: white;
     margin-top: 30px;
+    min-height: 400px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .faixa_footer {
     padding: 0 0 12px 0;

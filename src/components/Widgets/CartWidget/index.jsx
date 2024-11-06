@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './style.css'
 import { LuShoppingCart } from "react-icons/lu";
 import DisplayQuantidade from '../../DisplayQuantidade'
-import Carrinho from '../../ItemListContainer';
+import Carrinho from '../../Carrinho';
 import { createPortal } from 'react-dom';
 
 //const modal = document.getElementById('modal')
