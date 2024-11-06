@@ -19,48 +19,7 @@ function ListaProdutos () {
       useEffect(() => {
         const promiseProdutos = new Promise ((resolve, reject) => {
           setTimeout(() => {
-            resolve ([
-              {
-                id: 1,
-                titulo: 'Macaquinho Curto com Bolsos',
-                descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy.',
-                imagem: ImagemProduto1,
-                imagem2: ImagemProduto2,
-                preco: 199.90,
-                precoAvista: 179.90,
-                parcela: 19.90
-              },
-              {
-                id: 2,
-                titulo: 'Saia Longa de Linho Premium',
-                descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy.',
-                imagem: ImagemProduto2,
-                imagem2: ImagemProduto4,
-                preco: 199.90,
-                precoAvista: 179.90,
-                parcela: 19.90
-              },
-              {
-                id: 3,
-                titulo: 'Blazer Alfaiataria de Linho Premium',
-                descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy.',
-                imagem: ImagemProduto3,
-                imagem2: ImagemProduto6,
-                preco: 599.90,
-                precoAvista: 539.90,
-                parcela: 59.90
-              },
-              {
-                id: 4,
-                titulo: 'Vestido Longo de Malha Premium',
-                descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy.',
-                imagem: ImagemProduto4,
-                imagem2: ImagemProduto8,
-                preco: 299.90,
-                precoAvista: 269.90,
-                parcela: 29.90
-              }    
-            ])}, 4000)          
+            resolve ()}, 4000)          
           })
           promiseProdutos.then((response) => {
             setLoading(false)

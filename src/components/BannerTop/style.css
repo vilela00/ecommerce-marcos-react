@@ -1,0 +1,11 @@
+.bannerTop .carousel-inner {
+    background-color: #1b1b1b;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.bannerTop .carousel-inner .carousel-item p {
+    color: #dfdfdf;
+    font-size: 12px;
+    margin: 0;
+}

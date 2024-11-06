@@ -11,10 +11,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Contador from './components/ItemCount';
 import Carrinho from './components/ItemListContainer';
 import CartWidget from './components/Widgets/CartWidget';
+import BannerTop from './components/BannerTop';
 
 function App() {
   return (
     <div className="App">
+      <BannerTop />
       
       <NavBar />
 
