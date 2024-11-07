@@ -9,7 +9,7 @@ function Produto (props) {
         <div className = "produto container-fluid">
             <button className="d-block"><img src = {name} onMouseOver={() => setName(props.imagem2)} onMouseOut={() => setName(props.imagem)} /></button>
                 <div className="container_info">
-                    <h4>{props.titulo}</h4>
+                    <h5>{props.titulo}</h5>
                     <div className="container_preco">
                         <h5>De:</h5>
                         <h5 className="preco">{props.preco}</h5>
@@ -20,7 +20,7 @@ function Produto (props) {
                         <button className = "btn btn-dark btn_cart">ADD CART</button>
                         <button className="btn btn-secondary btn_produto">Ver Produto</button>
                     </div>
-                    <p>{props.descricao}</p>
+                    {/*<p>{props.descricao}</p>*/}
                 </div>
             
             {/*{props.children}*/}

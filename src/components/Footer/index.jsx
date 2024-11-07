@@ -6,6 +6,13 @@ import { FaCcAmex } from "react-icons/fa";
 import { FaMoneyBillWave } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
+import { TiSocialYoutube } from "react-icons/ti";
+import { AiFillTikTok } from "react-icons/ai";
+import { FaSquarePinterest } from "react-icons/fa6";
+
+
 
 function Footer () {
     return (
@@ -24,12 +31,22 @@ function Footer () {
                         <li>Bermuda</li>
                         <li>Tenis</li>
                         <li>Casaco</li>
+                        <li>Camisa</li>
+                        <li>Bermuda</li>
+                        <li>Tenis</li>
+                        <li>Casaco</li>
                     </ul>
                     <ul className='lista_footer'>
                         <li>Contato</li>
                         <li>Sobre Nos</li>
                         <li>Minha Conta</li>
                         <li>Termos e Condicoes</li>
+                    </ul>
+                    <ul className='lista_footer'>
+                        <li>Institucional</li>
+                        <li>Rastrear Pedido</li>
+                        <li>LGPD</li>
+                        <li>Chamar no WhatsApp</li>
                     </ul>
                 </div>
                 <div className='container_footer'>
@@ -53,6 +70,16 @@ function Footer () {
                                 <FaStarHalf color='#FFD700' />
                             </div>
                         <p>4,5 / 5</p>
+                    </div>
+                    <div className='container_redes'>
+                        <p>Estamos na redes</p>
+                        <div className='container_icons'>
+                            <FaFacebookSquare size={20} />
+                            <FaInstagram size={20} />
+                            <TiSocialYoutube size={20} />
+                            <AiFillTikTok size={20} />
+                            <FaSquarePinterest size={20} />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import CalcularFrete from '../CalculoFrete';
 import VitrineComplementar from '../VitrineComplementar';
 
 import './style.css'
+import LikeButton from '../Widgets/LikeButtonWidget';
 
 function DetalheProduto () {
 
@@ -25,7 +26,7 @@ function DetalheProduto () {
 
     return (
         <div>
-            <div className="container_produto container-fluid w-100 d-flex justify-content-left">
+            <div className="container_produto container-fluid w-100 d-flex">
                 <div className="container_fotos d-flex">
                     <div id="bannerProduto" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
@@ -59,9 +60,10 @@ function DetalheProduto () {
                     </div>                    
                 </div>
                 <div className="container_info_detalhe">
+                    <LikeButton />
                     <p className='sku_produto'>SKU: 1209392</p>
-                    <h4>nome do produto teste titulo</h4>
-                    <h5>R$ 399,90</h5>                    
+                    <h4 className='titulo_detalhe_produto'>nome do produto teste titulo</h4>
+                    <h4>R$ 399,90</h4>                    
                     <div className="cor">
                         <div className="tx_cor">
                             <p>Selecione a cor</p>

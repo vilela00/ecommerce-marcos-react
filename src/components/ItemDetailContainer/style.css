@@ -88,7 +88,7 @@
     justify-content: left;
     flex-direction: column;
     align-items: first baseline;
-    padding: 0 40px 0 40px;
+    padding: 15px 40px 0 40px;
 }
 .tx_tamanho p, .tx_cor p {
     text-align: left;
@@ -128,4 +128,7 @@
     font-size: 13px;
     text-align: left;
     padding: 10px 20px 10px 20px;
+}
+.titulo_detalhe_produto {
+    margin-top: 20px;
 }

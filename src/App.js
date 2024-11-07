@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import AvaliacoesHome from './components/AvaliacoesHome';
 import BannerTop from './components/BannerTop';
 import DetalheProduto from './components/ItemDetailContainer';
+import BotaoWhatsapp from './components/Widgets/WhatsAppWidget';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -19,6 +20,8 @@ function App() {
       <NavBar />
 
       <DetalheProduto />
+
+      <BotaoWhatsapp />
 
       <Footer />
       
