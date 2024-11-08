@@ -1,29 +1,22 @@
 import './App.css';
 
-import NavBar from './components/NavBar';
-import BannerHome from './components/BannerHome'
-import BannerFaixa from './components/BannerFaixa';
-import ListaProdutos from './components/ItemListContainer';
-import Footer from './components/Footer';
-import AvaliacoesHome from './components/AvaliacoesHome';
-import BannerTop from './components/BannerTop';
-import DetalheProduto from './components/ItemDetailContainer';
 import BotaoWhatsapp from './components/Widgets/WhatsAppWidget';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
 
 function App() {
   return (
     <div className="App">
-      <BannerTop />
-      
-      <NavBar />
 
-      <DetalheProduto />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
 
       <BotaoWhatsapp />
 
-      <Footer />
+
       
       {/*<BannerHome />
 

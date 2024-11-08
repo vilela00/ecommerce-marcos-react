@@ -1,16 +1,17 @@
 import './style.css'
-import Produto from '../Produto'
+import Produto from '../../components/Produto'
 
-import ImagemProduto1 from '../img/1.png'
-import ImagemProduto2 from '../img/2.jpg'
-import ImagemProduto3 from '../img/3.jpg'
-import ImagemProduto4 from '../img/4.png'
-import ImagemProduto5 from '../img/5.jpg'
-import ImagemProduto6 from '../img/6.png'
-import ImagemProduto7 from '../img/7.png'
-import ImagemProduto8 from '../img/8.png'
-import BannerCentral from '../BannerCentral'
+import ImagemProduto1 from '../../components/img/1.png'
+import ImagemProduto2 from '../../components/img/2.jpg'
+import ImagemProduto3 from '../../components//img/3.jpg'
+import ImagemProduto4 from '../../components/img/4.png'
+import ImagemProduto5 from '../../components/img/5.jpg'
+import ImagemProduto6 from '../../components/img/6.png'
+import ImagemProduto7 from '../../components//img/7.png'
+import ImagemProduto8 from '../../components/img/8.png'
+import BannerCentral from '../../components/BannerCentral'
 import { useEffect, useState } from 'react'
+import DetalheProduto from '../ItemDetailContainer'
 
 function ListaProdutos () {
 

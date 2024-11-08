@@ -1,19 +1,19 @@
 import { useState } from 'react'
 import { FaWhatsapp } from "react-icons/fa";
 import { CiVideoOn } from "react-icons/ci";
-import fotoPrincipal1 from '../img/1.png'
-import fotoPrincipal2 from '../img/2.jpg'
-import fotoPrincipal3 from '../img/3.jpg'
-import fotoPrincipal4 from '../img/4.png'
-import fotoPrincipal5 from '../img/5.jpg'
-import fotoPrincipal6 from '../img/6.png'
-import CalcularFrete from '../CalculoFrete';
-import VitrineComplementar from '../VitrineComplementar';
+import fotoPrincipal1 from '../../components/img/1.png'
+import fotoPrincipal2 from '../../components/img/2.jpg'
+import fotoPrincipal3 from '../../components/img/3.jpg'
+import fotoPrincipal4 from '../../components/img/4.png'
+import fotoPrincipal5 from '../../components/img/5.jpg'
+import fotoPrincipal6 from '../../components/img/6.png'
+import CalcularFrete from '../../components/CalculoFrete';
+import VitrineComplementar from '../../components/VitrineComplementar';
 
 import './style.css'
-import LikeButton from '../Widgets/LikeButtonWidget';
+import LikeButton from '../../components/Widgets/LikeButtonWidget';
 
-function DetalheProduto () {
+function DetalheProduto (props) {
 
     const [checkTamanho, setCheckTamanho] = useState(true)
     const checkHandlerTamanho = () => {

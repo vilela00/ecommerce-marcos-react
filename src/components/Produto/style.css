@@ -20,6 +20,9 @@
 .container_botoes button {
     width: 80%;
 }
+.container_botoes a {
+    width: 100%;
+}
 .container_info_botoes {
     display: flex;
     flex-direction: column;
