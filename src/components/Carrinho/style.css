@@ -11,11 +11,9 @@
     left: calc(100% - 600px);
     margin-top: 20px;
 }
-
 #modal::backdrop {
     background: rgba(0, 0, 0, 0.7);
 }
-
 .modal1 {
     display: flex;
     flex-direction: column;
@@ -26,26 +24,21 @@
     text-align: center;
     border-radius: 8px 0 0 8px;
 }
-
 .modal_header {
     display: flex;
     justify-content: space-between;
     border-bottom: #747474 solid 0.1px;
 }
-
 .titulo_modal {
     padding: 10px 0 10px 16px;
 }
-
 .botao_x {
     padding: 1px 3px 0 0;
 }
-
 .modal_body {
     padding: 15px;
     height: 100%;
 }
-
 .modal_footer {
     display: flex;
     justify-content: end;
@@ -54,7 +47,6 @@
     padding: 8px;
     gap: 10px;
 }
-
 .modal1 .close_x {
     padding: 0;
     font-size: 10px;
