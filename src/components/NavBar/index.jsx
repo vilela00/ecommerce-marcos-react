@@ -14,10 +14,10 @@ function NavBar() {
       <div>
         <BannerTop />
         <div className="navbar fixed-top">
-            <NavLink to={'/'}><img src = {logo} className="logo" /></NavLink>
+            <NavLink to={'/'}><img src = {logo} className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} /></NavLink>
             <nav>
                 <ul className="lista_menu">
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu">CAMISA</button></NavLink></li>
+                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CAMISA</button></NavLink></li>
                     <li><a href=""><button className="botao_menu">BERMUDA</button></a></li>
                     <li><a href=""><button className="botao_menu">TENIS</button></a></li>
                     <li><a href=""><button className="botao_menu">CASACO</button></a></li>
