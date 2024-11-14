@@ -1,9 +1,21 @@
+import { useState } from 'react'
 import imagem from '../img/1.png'
-import Contador from '../ItemCount'
+import Contador from '../ItemCountNovo'
 
 import './style.css'
 
 function Carrinho ( {onClose}) {
+
+    const [quantidade, setQuantidade] = useState(1)
+    const diminuiQuantidade = () => {
+        if (quantidade > 1) {
+            setQuantidade (quantidade - 1)
+        }
+    }
+    const aumentaQuantidade = () => {
+        setQuantidade (quantidade + 1)
+    }
+
     return (
         <div className='teste_blur'>
         <div className='container_modal'>
@@ -25,7 +37,11 @@ function Carrinho ( {onClose}) {
                                 <p>Vestido Longo Decote V Com Bolsos Laterais</p>
                             </div>
                             <div className='quantidade_modal'>
-                                <Contador />
+                                <Contador
+                                    diminuiQuantidade={diminuiQuantidade}
+                                    aumentaQuantidade={aumentaQuantidade}
+                                    quantidade={quantidade}
+                                />
                             </div>
                             <div className="valor_modal">
                                 <p>R$ 599,90</p>

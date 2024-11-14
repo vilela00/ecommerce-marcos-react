@@ -1,5 +1,6 @@
 .produto {
-    width: 25%;
+    width: 100%;
+    max-width: 400px;
     height: 100%;
     padding: 0 !important;
 }

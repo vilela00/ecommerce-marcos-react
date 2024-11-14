@@ -62,7 +62,7 @@ function VitrineComplementar () {
             <div className='titulo_complementar'>
                 <h5>relacionados</h5>   
             </div>     
-            <div className='lista_produtos'>
+            <div className='lista_produtos_complementar'>
                 {vitrineSecundaria.map((produto) => <Produto key = {produto.id} id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} />)}
             </div>
         </div>

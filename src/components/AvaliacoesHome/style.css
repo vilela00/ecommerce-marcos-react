@@ -1,5 +1,12 @@
+@media screen and (max-width: 1400px) {
+    .container_avaliacoes_home {
+        flex-wrap: wrap;
+    }
+}
+
 .container_avaliacoes_home {
     display: flex;
+    justify-content: center;
     gap: 20px;
     margin: 30px;
 }

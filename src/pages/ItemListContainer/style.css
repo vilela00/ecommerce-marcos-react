@@ -1,9 +1,15 @@
+@media screen and (max-width: 1200px) {
+    .lista_produtos {
+      flex-wrap: wrap;
+    }
+}
 
 .lista_produtos {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin: 20px;
+    margin: 20px 0 20px 0;
+    width: 100%;
 }
 .container_loading {
   display: flex;

@@ -1,3 +1,22 @@
+@media screen and (max-width: 1400px) {
+    .container_texto_faixa p {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .container_faixa1 {
+        display: none !important;
+    }
+    .container_faixa2 {
+        display: block !important;
+    }
+    .container_oferta {
+        width: 100% !important;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
 .container_oferta {
     display: flex;
     gap: 20px;

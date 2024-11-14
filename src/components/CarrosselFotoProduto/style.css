@@ -1,0 +1,7 @@
+.container_fotos {
+    height: 100%;
+    padding: 0;
+}
+.container_fotos img {
+    width: 50%;
+}

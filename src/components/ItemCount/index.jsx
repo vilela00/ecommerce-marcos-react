@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";
 import './style.css'
 
-function Contador () {
+function Contador ({}) {
 
     const [quantidade, setQuantidade] = useState (1)
 
@@ -17,7 +17,7 @@ function Contador () {
                 }>
                     <FaMinus size={15}/>
                 </button>
-                <input id={"quantidade"}className="input_quantidade" type="text" onChange={ (e) => setQuantidade(Number(e.target.value)) } value={quantidade} />
+                <input id="quantidade" className="input_quantidade" type="text" onChange={ (e) => setQuantidade(Number(e.target.value)) } value={quantidade} />
                 <button className="btn_quantidade" onClick={() => setQuantidade (quantidade + 1)}><FaPlus size={15}/></button>
             </div>
         </div>
