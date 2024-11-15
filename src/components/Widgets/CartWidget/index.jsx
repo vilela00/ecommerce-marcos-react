@@ -12,14 +12,14 @@ function CartWidget () {
 
     const { CartQuantidade } = useContext(CartContext)
 
-    const [showModal, setShowModal] = useState (false)
+    const [ showModal, setShowModal ] = useState (false)
 
     return (
         <div className="container_cart"> 
             <button className='botao_cart' onClick={() => setShowModal (true)}>
                 <LuShoppingCart size={20} />
                 <div className="quantidade_cart">
-                    <DisplayQuantidade quantidade = {CartQuantidade()} />
+                    <DisplayQuantidade quantidade={CartQuantidade()} />
                 </div>
             </button>
                 {showModal && createPortal (

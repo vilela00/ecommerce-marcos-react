@@ -11,12 +11,8 @@ import ImagemProduto7 from '../../components//img/7.png'
 import ImagemProduto8 from '../../components/img/8.png'
 import BannerCentral from '../../components/BannerCentral'
 import { useEffect, useState, useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
-import DetalheProduto from '../ItemDetailContainer'
 
 function ListaProdutos () {
-
-  const { addToCart } = useContext(CartContext)
 
   const [loading, setLoading] = useState(true)
 
@@ -126,14 +122,14 @@ function ListaProdutos () {
             </div>
           ) : (
             <div className='lista_produtos'>
-              {vitrinePrincipal.map((produto) => <Produto produto={produto} key = {produto.id} id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} />)}
+              {vitrinePrincipal.map((produto) => <Produto produto={produto} key={produto.id} />)}
             </div>
           ) }
             <div className='container_banner_central'>
                 <BannerCentral />
             </div>
             <div className='lista_produtos'>
-                {vitrineSecundaria.map((produto) => <Produto produto={produto} key = {produto.id} id = {produto.id} titulo = {produto.titulo} descricao = {produto.descricao} imagem = {produto.imagem} imagem2 = {produto.imagem2} preco = {produto.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} precoAvista = {produto.precoAvista.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} parcela = {produto.parcela.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} />)}
+                {vitrineSecundaria.map((produto) => <Produto produto={produto} key={produto.id} />)}
             </div>
         </div>
     )

@@ -1,20 +1,12 @@
-import { useState } from 'react'
-import imagem from '../img/1.png'
-import Contador from '../ItemCountNovo'
+import { useState, useContext } from 'react'
+import { CartContext } from "../../context/CartContext"
 
 import './style.css'
+import CarrinhoItem from '../CarrinhoItem'
 
-function Carrinho ( {onClose}) {
+function Carrinho ({ onClose }) {
 
-    const [quantidade, setQuantidade] = useState(1)
-    const diminuiQuantidade = () => {
-        if (quantidade > 1) {
-            setQuantidade (quantidade - 1)
-        }
-    }
-    const aumentaQuantidade = () => {
-        setQuantidade (quantidade + 1)
-    }
+    const { cart } = useContext(CartContext)
 
     return (
         <div className='teste_blur'>
@@ -31,21 +23,8 @@ function Carrinho ( {onClose}) {
                             <h6 className='w-25'>Quantidade</h6>
                             <h6 className='w-25'>Valor</h6>
                         </div>
-                        <div className="container_produto_modal">
-                            <div className="imagem_produto_modal">
-                                <img src={imagem} width='120px' alt="" />
-                                <p>Vestido Longo Decote V Com Bolsos Laterais</p>
-                            </div>
-                            <div className='quantidade_modal'>
-                                <Contador
-                                    diminuiQuantidade={diminuiQuantidade}
-                                    aumentaQuantidade={aumentaQuantidade}
-                                    quantidade={quantidade}
-                                />
-                            </div>
-                            <div className="valor_modal">
-                                <p>R$ 599,90</p>
-                            </div>
+                        <div>
+                            {cart.map((produto) => <CarrinhoItem produto={produto} key={produto.id}/>)}
                         </div>
                     </div>
                     <div id="valorTotal"></div>
