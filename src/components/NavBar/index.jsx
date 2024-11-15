@@ -18,11 +18,11 @@ function NavBar() {
             <nav>
                 <ul className="lista_menu">
                     <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CAMISA</button></NavLink></li>
-                    <li><a href=""><button className="botao_menu">BERMUDA</button></a></li>
-                    <li><a href=""><button className="botao_menu">TENIS</button></a></li>
-                    <li><a href=""><button className="botao_menu">CASACO</button></a></li>
-                    <li><a href=""><button className="botao_menu">UNDERWEAR</button></a></li>
-                    <li><a href=""><button className="botao_menu">INVERNO</button></a></li>
+                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>BERMUDA</button></NavLink></li>
+                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>TENIS</button></NavLink></li>
+                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CASACO</button></NavLink></li>
+                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>VERAO</button></NavLink></li>
+                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>INVERNO</button></NavLink></li>
                 </ul>
             </nav>
             
