@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { useParams } from "react-router-dom"
+import { CartContext } from "../../context/CartContext"
 import "./style.css"
 
 function Produto (props) {
+
+    const {addToCart} = useContext(CartContext)
 
     const [name, setName] = useState(props.imagem)
     const {id} = useParams()
@@ -20,7 +23,7 @@ function Produto (props) {
                     <h6>Por: {props.precoAvista} via PIX</h6>
                     <p>Ou 10 x de {props.parcela} no credito</p>
                     <div className="container_botoes">
-                        <button className = "btn btn-dark btn_cart">ADD CART</button>
+                        <button className = "btn btn-dark btn_cart" onClick={() => addToCart(props.produto)}>ADD CART</button>
                         <NavLink to={`/produto/${props.id}`}><button className="btn btn-secondary btn_produto" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Ver Produto</button></NavLink>
                     </div>
                     {/*<p>{props.descricao}</p>*/}

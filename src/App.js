@@ -5,17 +5,18 @@ import BotaoWhatsapp from './components/Widgets/WhatsAppWidget';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router';
+import CartProvider from './context/CartContext';
 
 function App() {
   return (
     <div className="App">
+      <CartProvider>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
 
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-
-      <BotaoWhatsapp />
-
+        <BotaoWhatsapp />
+      </CartProvider>
 
       
       {/*<BannerHome />
