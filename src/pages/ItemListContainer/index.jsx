@@ -11,6 +11,7 @@ import ImagemProduto7 from '../../components//img/7.png'
 import ImagemProduto8 from '../../components/img/8.png'
 import BannerCentral from '../../components/BannerCentral'
 import { useEffect, useState, useContext } from 'react'
+import Loader from '../../components/Loader'
 
 function ListaProdutos () {
 
@@ -116,10 +117,7 @@ function ListaProdutos () {
     return (
         <div>
           { loading ? (
-            <div className='container_loading'>
-              <div className='loader'></div>
-              <h5>Carregando vitrine...</h5>
-            </div>
+            <Loader texto={'Carregando vitrine...'}/>
           ) : (
             <div className='lista_produtos'>
               {vitrinePrincipal.map((produto) => <Produto produto={produto} key={produto.id} />)}

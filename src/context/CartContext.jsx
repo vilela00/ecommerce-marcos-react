@@ -21,8 +21,8 @@ function CartProvider ({ children }) {
     }
 
     function RemoveCart (item) {
-        let index = cart.find(cartItem => cartItem.id === item.id)
-            setCart ([...cart.splice(index, 1)])
+        let newList = cart.filter(cartItem => cartItem.id !== item.id)
+        setCart(newList)
     }
 
     function CartQuantidade () {
