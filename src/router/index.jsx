@@ -13,7 +13,7 @@ function Router () {
 
             <Routes>
                 <Route exact path = '/' element = {<Home />} />
-                <Route exact path = '/produto/:id' element = {<DetalheProduto />} />
+                <Route exact path = '/produto/:produtoId' element = {<DetalheProduto />} />
                 <Route exact path = '/categoria/:id' element = {<ListaProdutos />} />
             </Routes>
 

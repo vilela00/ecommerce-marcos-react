@@ -15,7 +15,7 @@ function CartProvider ({ children }) {
         if (!cart.find(cartItem => cartItem.id === item.id)) {
             setCart ([...cart, item])
         } else {
-            console.log('Item ja no carrinho')
+            AumentaQuantidade(item)
         }
         setShowModal(true)
     }
@@ -26,9 +26,17 @@ function CartProvider ({ children }) {
     }
 
     function AumentaQuantidade (item) {
-        let novaQuantidade = cart.find(cartItem => cartItem.id === item.id)
-        console.log(novaQuantidade)
-        ++novaQuantidade.quantidade
+        // let novaQuantidade = cart.find(cartItem => cartItem.id === item.id)
+        // ++novaQuantidade.quantidade
+        setCart(cart.map((cartItem) => cartItem.id === item.id ? { ...cartItem, quantidade: cartItem.quantidade + 1 } : {...cartItem}))
+    }
+
+    function DiminuiQuantidade(item) {
+        // let novaQuantidade = cart.find(cartItem => cartItem.id === item.id)
+        // if (novaQuantidade.quantidade > 1) {
+        //     --novaQuantidade.quantidade
+        // }
+        setCart(cart.map((cartItem) => (cartItem.id === item.id && cartItem.quantidade > 1) ? { ...cartItem, quantidade: cartItem.quantidade - 1 } : {...cartItem}))
     }
 
     function CartQuantidade () {
@@ -36,7 +44,7 @@ function CartProvider ({ children }) {
     }
 
     return (
-        <CartContext.Provider value={{ cart, AddToCart, CartQuantidade, RemoveCart, AumentaQuantidade }}>
+        <CartContext.Provider value={{ cart, AddToCart, CartQuantidade, RemoveCart, AumentaQuantidade, DiminuiQuantidade }}>
             { children }
             {showModal && createPortal (
                 <Carrinho onClose = {() => setShowModal (false)} />, 

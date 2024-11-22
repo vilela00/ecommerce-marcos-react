@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import LikeButton from '../../components/Widgets/LikeButtonWidget';
 import { FaWhatsapp } from "react-icons/fa";
 import { CiVideoOn } from "react-icons/ci";
 import CalcularFrete from '../../components/CalculoFrete';
+import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import db from '../../services/firebase';
 import './style.css'
 
 function ContainerInfoProduto () {
@@ -16,13 +19,34 @@ function ContainerInfoProduto () {
         setCheckCor(!checkCor)
     }
 
+    const { produtoId } = useParams()
+    
+    const [ produto, setProduto ] = useState ([])
+    
+    useEffect(() => {
+        // Pegar item específico
+        const prodRef = doc(db, "produtos", produtoId);
+        console.log("prodRef: ", prodRef);
+
+        getDoc(prodRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    console.log("snapshot: ", snapshot.data());
+                    setProduto({
+                        ...snapshot.data(),
+                        id: snapshot.id
+                    })
+                }
+            });
+    }, [])
+
     return (
         <div>
             <div className="container_info_detalhe">
                 <LikeButton />
                 <p className='sku_produto'>SKU: 1209392</p>
-                <h4 className='titulo_detalhe_produto'>nome do produto teste titulo</h4>
-                <h4>R$ 399,90</h4>
+                <h4 className='titulo_detalhe_produto'>{produto.titulo}</h4>
+                <h4>{Number(produto.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>
                 <div className="cor">
                     <div className="tx_cor">
                         <p>Selecione a cor</p>

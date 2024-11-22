@@ -32,15 +32,15 @@ function Carrinho ({ onClose }) {
                                 <div>
                                 <div className='container_pag'>
                                     <h5>Valor total do seu carrinho:</h5>
-                                    <h4>{cart.reduce((soma, preco) => soma + preco.preco, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>
+                                    <h4>{cart.reduce((soma, preco) => soma + (preco.preco * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>
                                 </div>
                                 <div className='container_pag'>
                                     <h6>Pague à vista:</h6>
-                                    <h5>{cart.reduce((soma, preco) => soma + preco.precoAvista, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
+                                    <h5>{cart.reduce((soma, preco) => soma + (preco.precoAvista * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
                                 </div>
                                 <div className='container_pag'>
                                     <h6>Ou parcele em até 10x de:</h6>
-                                    <h5>{cart.reduce((soma, preco) => soma + preco.parcela, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
+                                    <h5>{cart.reduce((soma, preco) => soma + (preco.parcela * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
                                 </div>
                                 </div>
                             ) : (

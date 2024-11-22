@@ -1,5 +1,7 @@
 import './style.css'
 import Produto from '../../components/Produto'
+import { getDocs, collection, where, query } from 'firebase/firestore'
+import db from '../../services/firebase'
 
 import ImagemProduto1 from '../../components/img/1.png'
 import ImagemProduto2 from '../../components/img/2.jpg'
@@ -17,110 +19,119 @@ function ListaProdutos () {
 
   const [loading, setLoading] = useState(true)
 
+  const [ vitrinePrincipal, setVitrinePrincipal] = useState([])
+  const [ vitrineSecundaria, setVitrineSecundaria] = useState([])
+
       useEffect(() => {
-        const promiseProdutos = new Promise ((resolve, reject) => {
-          setTimeout(() => {
-            resolve ()}, 4000)          
-          })
-          promiseProdutos.then((response) => {
+        // Pegar coleção
+        const itemsCollection = collection(db, "produtos");
+        const queryPrincipal = query(itemsCollection, where(`vitrine`, `==`, `principal`))
+        getDocs(queryPrincipal)
+          .then((snapshot) => {
+            setVitrinePrincipal(snapshot.docs.map((item) => ({ ...item.data(), id: item.id })))
+          });
+
+          const querySecundaria = query(itemsCollection, where(`vitrine`, `==`, `secundaria`))
+          getDocs(querySecundaria)
+            .then((snapshot) => {
+              setVitrineSecundaria(snapshot.docs.map((item) => ({ ...item.data(), id: item.id })))
+            });
             setLoading(false)
-            return response
-          })
-        }, [])
+      }, [])
 
-      const vitrinePrincipal = [
-        {
-          id: 1,
-          titulo: 'Macaquinho Curto com Bolsos',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto1,
-          imagem2: ImagemProduto2,
-          preco: 199.90,
-          precoAvista: 179.90,
-          parcela: 19.90,
-          quantidade: 1
-        },
-        {
-          id: 2,
-          titulo: 'Saia Longa de Linho Premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto2,
-          imagem2: ImagemProduto4,
-          preco: 199.90,
-          precoAvista: 179.90,
-          parcela: 19.90,
-          quantidade: 1
-        },
-        {
-          id: 3,
-          titulo: 'Blazer Alfaiataria de Linho Premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto3,
-          imagem2: ImagemProduto6,
-          preco: 599.90,
-          precoAvista: 539.90,
-          parcela: 59.90,
-          quantidade: 1
-        },
-        {
-          id: 4,
-          titulo: 'Vestido Longo de Malha Premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto4,
-          imagem2: ImagemProduto8,
-          preco: 299.90,
-          precoAvista: 269.90,
-          parcela: 29.90,
-          quantidade: 1
-        }    
-      ]
+      // const vitrinePrincipal = [
+      //   {
+      //     id: 1,
+      //     titulo: 'Macaquinho Curto com Bolsos',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto1,
+      //     imagem2: ImagemProduto2,
+      //     preco: 199.90,
+      //     precoAvista: 179.90,
+      //     parcela: 19.90,
+      //     quantidade: 1
+      //   },
+      //   {
+      //     id: 2,
+      //     titulo: 'Saia Longa de Linho Premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto2,
+      //     imagem2: ImagemProduto4,
+      //     preco: 199.90,
+      //     precoAvista: 179.90,
+      //     parcela: 19.90,
+      //     quantidade: 1
+      //   },
+      //   {
+      //     id: 3,
+      //     titulo: 'Blazer Alfaiataria de Linho Premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto3,
+      //     imagem2: ImagemProduto6,
+      //     preco: 599.90,
+      //     precoAvista: 539.90,
+      //     parcela: 59.90,
+      //     quantidade: 1
+      //   },
+      //   {
+      //     id: 4,
+      //     titulo: 'Vestido Longo de Malha Premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto4,
+      //     imagem2: ImagemProduto8,
+      //     preco: 299.90,
+      //     precoAvista: 269.90,
+      //     parcela: 29.90,
+      //     quantidade: 1
+      //   }    
+      // ]
 
-      const vitrineSecundaria = [
-        {
-          id: 5,
-          titulo: 'Camisa de Linho Premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto5,
-          imagem2: ImagemProduto1,
-          preco: 199.90,
-          precoAvista: 179.90,
-          parcela: 19.90,
-          quantidade: 1
-        },
-        {
-          id: 6,
-          titulo: 'Camisa Oversized Linho Premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto6,
-          imagem2: ImagemProduto2,
-          preco: 199.90,
-          precoAvista: 179.90,
-          parcela: 19.90,
-          quantidade: 1
-        },
-        {
-          id: 7,
-          titulo: 'Macaquinho Curto de Linho premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto7,
-          imagem2: ImagemProduto3,
-          preco: 399.90,
-          precoAvista: 359.90,
-          parcela: 39.90,
-          quantidade: 1
-        },
-        {
-          id: 8,
-          titulo: 'Top Cropped de Amarracao Linho Premium',
-          descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
-          imagem: ImagemProduto8,
-          imagem2: ImagemProduto4,
-          preco: 299.90,
-          precoAvista: 269.90,
-          parcela: 29.90,
-          quantidade: 1
-        }    
-      ]
+      // const vitrineSecundaria = [
+      //   {
+      //     id: 5,
+      //     titulo: 'Camisa de Linho Premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto5,
+      //     imagem2: ImagemProduto1,
+      //     preco: 199.90,
+      //     precoAvista: 179.90,
+      //     parcela: 19.90,
+      //     quantidade: 1
+      //   },
+      //   {
+      //     id: 6,
+      //     titulo: 'Camisa Oversized Linho Premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto6,
+      //     imagem2: ImagemProduto2,
+      //     preco: 199.90,
+      //     precoAvista: 179.90,
+      //     parcela: 19.90,
+      //     quantidade: 1
+      //   },
+      //   {
+      //     id: 7,
+      //     titulo: 'Macaquinho Curto de Linho premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto7,
+      //     imagem2: ImagemProduto3,
+      //     preco: 399.90,
+      //     precoAvista: 359.90,
+      //     parcela: 39.90,
+      //     quantidade: 1
+      //   },
+      //   {
+      //     id: 8,
+      //     titulo: 'Top Cropped de Amarracao Linho Premium',
+      //     descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      //     imagem: ImagemProduto8,
+      //     imagem2: ImagemProduto4,
+      //     preco: 299.90,
+      //     precoAvista: 269.90,
+      //     parcela: 29.90,
+      //     quantidade: 1
+      //   }    
+      // ]
 
     return (
         <div>

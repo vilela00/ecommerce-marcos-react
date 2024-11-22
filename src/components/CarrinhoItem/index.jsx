@@ -4,19 +4,12 @@ import Contador from "../ItemCountNovo"
 import { FaRegTrashCan } from "react-icons/fa6";
 
 function CarrinhoItem (props) {
-    
-    const [ quantidade, setQuantidade ] = useState(1)
 
     const { RemoveCart } = useContext(CartContext)
 
     const { AumentaQuantidade } = useContext(CartContext)
 
-    const diminuiQuantidade = () => {
-        if (quantidade > 1) {
-            setQuantidade (quantidade - 1)
-        }
-    }
-
+    const { DiminuiQuantidade } = useContext(CartContext)
 
     return (
         <div className="container_produto_modal">
@@ -26,13 +19,13 @@ function CarrinhoItem (props) {
             </div>
             <div className='quantidade_modal'>
                 <Contador
-                    diminuiQuantidade={diminuiQuantidade}
+                    diminuiQuantidade={() => DiminuiQuantidade(props.produto)}
                     aumentaQuantidade={() => AumentaQuantidade(props.produto)}
                     quantidade={props.produto.quantidade}
                 />
             </div>
             <div className="valor_modal">
-                <p>{(props.produto.preco * quantidade).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
+                <p>{(props.produto.preco * props.produto.quantidade).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>
             </div>
             <div>
                 <button className="border border-0 bg-transparent" onClick={() => RemoveCart(props.produto)}>

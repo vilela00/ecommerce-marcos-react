@@ -18,9 +18,11 @@ function CartWidget () {
         <div className="container_cart"> 
             <button className='botao_cart' onClick={() => setShowModal (true)}>
                 <LuShoppingCart size={20} />
-                <div className="quantidade_cart">
-                    <DisplayQuantidade quantidade={CartQuantidade()} />
-                </div>
+                { !CartQuantidade() ? '' : (
+                    <div className="quantidade_cart">
+                        <DisplayQuantidade quantidade={CartQuantidade()} />
+                    </div>
+                 )}
             </button>
                 {showModal && createPortal (
                     <Carrinho onClose = {() => setShowModal (false)} />, 
