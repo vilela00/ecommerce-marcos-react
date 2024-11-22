@@ -27,7 +27,28 @@ function Carrinho ({ onClose }) {
                                 {cart.map((produto) => <CarrinhoItem produto={produto} key={produto.id}/>)}
                             </div>
                         </div>
-                        <div id="valorTotal"></div>
+                        <div id="valorTotal" className='valor_total'>
+                            {cart != '' ? (
+                                <div>
+                                <div className='container_pag'>
+                                    <h5>Valor total do seu carrinho:</h5>
+                                    <h4>{cart.reduce((soma, preco) => soma + preco.preco, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>
+                                </div>
+                                <div className='container_pag'>
+                                    <h6>Pague à vista:</h6>
+                                    <h5>{cart.reduce((soma, preco) => soma + preco.precoAvista, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
+                                </div>
+                                <div className='container_pag'>
+                                    <h6>Ou parcele em até 10x de:</h6>
+                                    <h5>{cart.reduce((soma, preco) => soma + preco.parcela, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
+                                </div>
+                                </div>
+                            ) : (
+                                <div className='container_vazio'>
+                                    <h5>Seu carrinho está vazio!</h5>
+                                </div>
+                            )}
+                        </div>
                         <div className="modal_footer">
                             <button id='close' className="btn btn-secondary close" onClick={onClose}>Continuar Comprando</button>
                             <button className="btn btn-primary close" id="comprar">Finalizar Compra</button>

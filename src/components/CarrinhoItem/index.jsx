@@ -5,18 +5,18 @@ import { FaRegTrashCan } from "react-icons/fa6";
 
 function CarrinhoItem (props) {
     
-    const [quantidade, setQuantidade ] = useState(1)
+    const [ quantidade, setQuantidade ] = useState(1)
 
     const { RemoveCart } = useContext(CartContext)
+
+    const { AumentaQuantidade } = useContext(CartContext)
 
     const diminuiQuantidade = () => {
         if (quantidade > 1) {
             setQuantidade (quantidade - 1)
         }
     }
-    const aumentaQuantidade = () => {
-        setQuantidade (quantidade + 1)
-    }
+
 
     return (
         <div className="container_produto_modal">
@@ -27,8 +27,8 @@ function CarrinhoItem (props) {
             <div className='quantidade_modal'>
                 <Contador
                     diminuiQuantidade={diminuiQuantidade}
-                    aumentaQuantidade={aumentaQuantidade}
-                    quantidade={quantidade}
+                    aumentaQuantidade={() => AumentaQuantidade(props.produto)}
+                    quantidade={props.produto.quantidade}
                 />
             </div>
             <div className="valor_modal">

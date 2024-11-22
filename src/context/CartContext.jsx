@@ -25,12 +25,18 @@ function CartProvider ({ children }) {
         setCart(newList)
     }
 
+    function AumentaQuantidade (item) {
+        let novaQuantidade = cart.find(cartItem => cartItem.id === item.id)
+        console.log(novaQuantidade)
+        ++novaQuantidade.quantidade
+    }
+
     function CartQuantidade () {
-        return cart.length
+        return cart.reduce((soma, quantidade) => soma + quantidade.quantidade, 0)
     }
 
     return (
-        <CartContext.Provider value={{ cart, AddToCart, CartQuantidade, RemoveCart }}>
+        <CartContext.Provider value={{ cart, AddToCart, CartQuantidade, RemoveCart, AumentaQuantidade }}>
             { children }
             {showModal && createPortal (
                 <Carrinho onClose = {() => setShowModal (false)} />, 

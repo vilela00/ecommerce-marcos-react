@@ -37,7 +37,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto2,
           preco: 199.90,
           precoAvista: 179.90,
-          parcela: 19.90
+          parcela: 19.90,
+          quantidade: 1
         },
         {
           id: 2,
@@ -47,7 +48,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto4,
           preco: 199.90,
           precoAvista: 179.90,
-          parcela: 19.90
+          parcela: 19.90,
+          quantidade: 1
         },
         {
           id: 3,
@@ -57,7 +59,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto6,
           preco: 599.90,
           precoAvista: 539.90,
-          parcela: 59.90
+          parcela: 59.90,
+          quantidade: 1
         },
         {
           id: 4,
@@ -67,7 +70,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto8,
           preco: 299.90,
           precoAvista: 269.90,
-          parcela: 29.90
+          parcela: 29.90,
+          quantidade: 1
         }    
       ]
 
@@ -80,7 +84,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto1,
           preco: 199.90,
           precoAvista: 179.90,
-          parcela: 19.90
+          parcela: 19.90,
+          quantidade: 1
         },
         {
           id: 6,
@@ -90,7 +95,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto2,
           preco: 199.90,
           precoAvista: 179.90,
-          parcela: 19.90
+          parcela: 19.90,
+          quantidade: 1
         },
         {
           id: 7,
@@ -100,7 +106,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto3,
           preco: 399.90,
           precoAvista: 359.90,
-          parcela: 39.90
+          parcela: 39.90,
+          quantidade: 1
         },
         {
           id: 8,
@@ -110,7 +117,8 @@ function ListaProdutos () {
           imagem2: ImagemProduto4,
           preco: 299.90,
           precoAvista: 269.90,
-          parcela: 29.90
+          parcela: 29.90,
+          quantidade: 1
         }    
       ]
 
