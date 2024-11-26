@@ -3,10 +3,12 @@ import { CartContext } from "../../context/CartContext"
 
 import './style.css'
 import CarrinhoItem from '../CarrinhoItem'
+import Pedido from '../Pedido'
 
 function Carrinho ({ onClose }) {
 
     const { cart } = useContext(CartContext)
+    const { Comprar } = useContext(CartContext)
 
     return (
         <div className='teste_blur'>
