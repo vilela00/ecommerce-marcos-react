@@ -22,7 +22,7 @@ function NavBar() {
                     <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>TENIS</button></NavLink></li>
                     <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CASACO</button></NavLink></li>
                     <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>VERAO</button></NavLink></li>
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>INVERNO</button></NavLink></li>
+                    <li><NavLink to={`/checkout/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>INVERNO</button></NavLink></li>
                 </ul>
             </nav>
             

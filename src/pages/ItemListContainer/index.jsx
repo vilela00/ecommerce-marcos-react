@@ -12,7 +12,7 @@ import db from '../../services/firebase'
 // import ImagemProduto7 from '../../components//img/7.png'
 // import ImagemProduto8 from '../../components/img/8.png'
 import BannerCentral from '../../components/BannerCentral'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState } from 'react'
 import Loader from '../../components/Loader'
 
 function ListaProdutos () {

@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import LikeButton from '../../components/Widgets/LikeButtonWidget';
 import { FaWhatsapp } from "react-icons/fa";
 import { CiVideoOn } from "react-icons/ci";
 import CalcularFrete from '../../components/CalculoFrete';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
+import { CartContext } from "../../context/CartContext"
 import db from '../../services/firebase';
 import './style.css'
 
@@ -22,6 +23,8 @@ function ContainerInfoProduto () {
     const { produtoId } = useParams()
     
     const [ produto, setProduto ] = useState ([])
+
+    const { AddToCart } = useContext(CartContext)
     
     useEffect(() => {
         // Pegar item específico
@@ -90,7 +93,7 @@ function ContainerInfoProduto () {
                     </div>
                 </div>
                 <div className='w-100'>
-                    <button className='btn btn-dark botao_comprar w-100'>comprar</button>
+                    <button className='btn btn-dark botao_comprar w-100' onClick={() => AddToCart(produto)}>comprar</button>
                     <div className='container_botao_auxiliar'>
                         <button className='btn btn-outline-dark w-50 botao_auxiliar'><FaWhatsapp /> comprar por WhatsApp</button>
                         <button className='btn btn-outline-dark w-50 botao_auxiliar'><CiVideoOn /> comprar por video</button>

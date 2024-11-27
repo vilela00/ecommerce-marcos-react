@@ -1,14 +1,13 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import { CartContext } from "../../context/CartContext"
 
 import './style.css'
 import CarrinhoItem from '../CarrinhoItem'
-import Pedido from '../Pedido'
+import { NavLink } from 'react-router-dom'
 
 function Carrinho ({ onClose }) {
 
     const { cart } = useContext(CartContext)
-    const { Comprar } = useContext(CartContext)
 
     return (
         <div className='teste_blur'>
@@ -32,18 +31,18 @@ function Carrinho ({ onClose }) {
                         <div id="valorTotal" className='valor_total'>
                             {cart != '' ? (
                                 <div>
-                                <div className='container_pag'>
-                                    <h5>Valor total do seu carrinho:</h5>
-                                    <h4>{cart.reduce((soma, preco) => soma + (preco.preco * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h4>
-                                </div>
-                                <div className='container_pag'>
-                                    <h6>Pague à vista:</h6>
-                                    <h5>{cart.reduce((soma, preco) => soma + (preco.precoAvista * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
-                                </div>
-                                <div className='container_pag'>
-                                    <h6>Ou parcele em até 10x de:</h6>
-                                    <h5>{cart.reduce((soma, preco) => soma + (preco.parcela * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h5>
-                                </div>
+                                    <div className='container_pag'>
+                                        <h5>Valor total do seu carrinho:</h5>
+                                        <h4>{cart.reduce((soma, preco) => soma + (preco.preco * preco.quantidade), 0).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</h4>
+                                    </div>
+                                    <div className='container_pag'>
+                                        <h6>Pague à vista:</h6>
+                                        <h5>{cart.reduce((soma, preco) => soma + (preco.precoAvista * preco.quantidade), 0).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</h5>
+                                    </div>
+                                    <div className='container_pag'>
+                                        <h6>Ou parcele em até 10x de:</h6>
+                                        <h5>{cart.reduce((soma, preco) => soma + (preco.parcela * preco.quantidade), 0).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</h5>
+                                    </div>
                                 </div>
                             ) : (
                                 <div className='container_vazio'>
@@ -53,7 +52,8 @@ function Carrinho ({ onClose }) {
                         </div>
                         <div className="modal_footer">
                             <button id='close' className="btn btn-secondary close" onClick={onClose}>Continuar Comprando</button>
-                            <button className="btn btn-primary close" id="comprar">Finalizar Compra</button>
+                            {/* <NavLink to={`/checkout/`}></NavLink> */}
+                            <button className="btn btn-primary close" id="comprar" onClick={onClose}>Finalizar Compra</button>
                         </div>                
                     </div>
                 </section>

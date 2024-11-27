@@ -1,11 +1,8 @@
 import { useState, useContext, useEffect } from "react"
 import { NavLink } from "react-router-dom"
-import { useParams } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 import Carrinho from '../Carrinho';
 import { createPortal } from 'react-dom';
-import db from '../../services/firebase';
-import { doc, getDoc } from 'firebase/firestore';
 import "./style.css"
 
 function Produto (props) {

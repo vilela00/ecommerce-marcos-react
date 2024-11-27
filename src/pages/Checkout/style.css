@@ -1,0 +1,14 @@
+.container_dados_usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40%;
+}
+.container_checkout {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 180px 80px 180px;
+}
+.carrinho_checkout {
+    width: 60%;
+}

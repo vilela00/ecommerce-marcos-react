@@ -6,14 +6,20 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter } from 'react-router-dom';
 import Router from './router';
 import CartProvider from './context/CartContext';
+import Checkout from './pages/Checkout';
 
 function App() {
   return (
     <div className="App">
+
+
+
       <CartProvider>
         <BrowserRouter>
           <Router />
         </BrowserRouter>
+
+        {/* <Checkout /> */}
 
         <BotaoWhatsapp />
       </CartProvider>

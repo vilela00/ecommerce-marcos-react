@@ -1,0 +1,13 @@
+.dados_pagamento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+#validade, #seguranca {
+    max-width: 120px;
+}
+#realizarPagamento {
+    margin: 60px;
+}

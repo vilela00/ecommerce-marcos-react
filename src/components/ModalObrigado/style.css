@@ -1,0 +1,31 @@
+.container_modal_obrigado {
+    position: fixed;
+    right: calc(50% - 300px);
+    top: 100px;
+    z-index: 5;
+}
+.modal1_obrigado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 600px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+}
+.modal_header_obrigado {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.container_info_obrigado {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.modal1_obrigado .headline_carrinho_checkout {
+    padding: 0 0 20px 0;
+}
+.modal1_obrigado .valor_total {
+    display: none;
+}
