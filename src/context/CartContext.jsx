@@ -14,6 +14,7 @@ function CartProvider ({ children }) {
 
     const [ showModal, setShowModal ] = useState(false)
     const [ showModal2, setShowModal2 ] = useState(false)
+    const [ order, setOrder ] = useState({})
 
     // function Cadastrar (user) {
     //     user = {nome: user.nome, email: user.email, telefone: user.telefone}
@@ -60,6 +61,7 @@ function CartProvider ({ children }) {
 
         addDoc(ordersCollection, Pedido)
             .then((doc) => {
+                setOrder(Pedido)
                 console.log("Pedido criado com sucesso: ", doc.id);
             });
 
@@ -76,7 +78,7 @@ function CartProvider ({ children }) {
                 document.body
             )}
             {showModal2 && createPortal (
-                <Obrigado onClose = {() => setShowModal2 (false)} />, 
+                <Obrigado order={order} onClose = {() => setShowModal2 (false)} />, 
                 document.body
             )}
         </CartContext.Provider>        

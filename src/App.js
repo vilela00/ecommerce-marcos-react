@@ -14,15 +14,17 @@ function App() {
 
 
 
-      <CartProvider>
+
         <BrowserRouter>
+        <CartProvider>
           <Router />
+          </CartProvider>
         </BrowserRouter>
 
         {/* <Checkout /> */}
 
         <BotaoWhatsapp />
-      </CartProvider>
+
 
       
       {/*<BannerHome />

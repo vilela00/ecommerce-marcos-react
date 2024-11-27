@@ -16,7 +16,7 @@ function Router () {
                 <Route exact path = '/' element = {<Home />} />
                 <Route exact path = '/produto/:produtoId' element = {<DetalheProduto />} />
                 <Route exact path = '/categoria/:id' element = {<ListaProdutos />} />
-                <Route exact path = '/checkout/:id' element = {<Checkout />} />
+                <Route exact path = '/checkout/' element = {<Checkout />} />
             </Routes>
 
             <Footer />

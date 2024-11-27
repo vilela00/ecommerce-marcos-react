@@ -52,8 +52,7 @@ function Carrinho ({ onClose }) {
                         </div>
                         <div className="modal_footer">
                             <button id='close' className="btn btn-secondary close" onClick={onClose}>Continuar Comprando</button>
-                            {/* <NavLink to={`/checkout/`}></NavLink> */}
-                            <button className="btn btn-primary close" id="comprar" onClick={onClose}>Finalizar Compra</button>
+                            <NavLink to={`/checkout/`}><button className="btn btn-primary close" id="comprar" onClick={onClose}>Finalizar Compra</button></NavLink>                            
                         </div>                
                     </div>
                 </section>

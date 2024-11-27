@@ -1,27 +1,29 @@
 import CarrinhoCheckout from '../CarrinhoCkeckout'
-import { getDoc, collection, where, query, doc } from 'firebase/firestore'
-import db from '../../services/firebase'
+// import { getDocs, collection, where, query, doc } from 'firebase/firestore'
+// import db from '../../services/firebase'
 import './style.css'
+// import { useState } from 'react'
 
-function Obrigado ({ onClose }, props) {
+function Obrigado ({ onClose, order }) {
 
-    // Pegar item específico
-    const orderRef = doc(db, "pedidos", "Me85A6CrazwtooIGiXNj");
-    console.log("orderRef: ", orderRef);
+    // const [ usuario, setUsuario ] = useState('')
 
-    getDoc(orderRef)
-        .then((snapshot) => {
-            if (snapshot.exists()) {
-                console.log("snapshot: ", snapshot.data());
-            }
-        });
+    // // Pegar item específico
+    // const orderRef = doc(db, "pedidos", "iY9mWExY5KCgLLvZ5xS0");
+    // console.log("orderRef: ", orderRef);
+
+
 
     // const OrdersCollection = collection(db, "pedidos");
-    // const queryOrders = query(itemsCollection, where(`vitrine`, `==`, `principal`))
-    // getDocs(queryPrincipal)
+    // const queryOrders = query(OrdersCollection, where(`comprador.nome`, `==`, `Marcos`))
+    // getDocs(queryOrders)
     //   .then((snapshot) => {
-    //     setOrder(snapshot.docs.map((order) => ({ ...order.data(), id: order.id })))
+    //     setUsuario(snapshot.docs.map((order) => ({ ...order.data(), id: order.id })))
+    //     console.log(usuario)
     //   });
+
+    const itens = order.itens
+    console.log(itens)
 
     return (
         <div className='teste_blur'>
@@ -33,12 +35,12 @@ function Obrigado ({ onClose }, props) {
                         </div>
                         <div className="modal_body" id="produto_modal">
                             <div className='container_info_obrigado'>
-                                <h6>Nome</h6>
-                                <h6>E-mail</h6>
-                                <h6>Telefone</h6>
+                                <h6>Nome: {order.comprador?.nome}</h6>
+                                <h6>E-mail: {order.comprador?.email}</h6>
+                                <h6>Telefone: {order.comprador?.telefone}</h6>
                                 <h6>Forma de pagamento</h6>
                             </div>
-                            <CarrinhoCheckout />
+                            <p>{itens[0].titulo}</p>
                             <p>Muito obrigado pela sua compra! Agradecemos a preferencia!</p>
                         </div>
                         <div className="modal_footer">

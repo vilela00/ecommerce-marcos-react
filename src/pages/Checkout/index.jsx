@@ -5,7 +5,7 @@ import './style.css'
 
 function Checkout () {
     return (
-        <div className="container_checkout">
+        <div className="container_checkout" onLoad={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="container_dados_usuario">
                 <DadosUsuario />
                 <DadosPagamento />
