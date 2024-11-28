@@ -29,12 +29,10 @@ function ContainerInfoProduto () {
     useEffect(() => {
         // Pegar item específico
         const prodRef = doc(db, "produtos", produtoId);
-        console.log("prodRef: ", prodRef);
 
         getDoc(prodRef)
             .then((snapshot) => {
                 if (snapshot.exists()) {
-                    console.log("snapshot: ", snapshot.data());
                     setProduto({
                         ...snapshot.data(),
                         id: snapshot.id

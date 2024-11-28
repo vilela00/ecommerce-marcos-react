@@ -121,7 +121,7 @@ const produtos = [
     }    
   ]
 
-console.log('firebase')
+// console.log('firebase')
 // Popular a collection produtos
 // produtos.forEach(async (obj) => {
 //   const docRef = await addDoc(collection(db, "produtos"), obj);

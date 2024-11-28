@@ -1,14 +1,14 @@
-import { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+// import { useContext } from 'react'
+// import { CartContext } from '../../context/CartContext'
 import './style.css'
 
 function DadosUsuario (props) {
 
-    const { Cadastrar } = useContext(CartContext)
+    // const { Cadastrar } = useContext(CartContext)
 
     return (
         <div>
-            <form className="dados_usuario">
+            <form className="dados_usuario" id='user_form'>
                 <h4>Dados Pessoais</h4>
                 <label htmlFor="nome">Nome completo</label>
                 <input type="text" id="nome" value={props.nome} />

@@ -20,7 +20,7 @@ function Footer () {
             <div className='news'>
                 <p>Cadastre-se na nossa Newsletter!</p>
                 <div className='container_input_news'>
-                    <input type='text' placeholder='email@email.com' className='input_news'></input>
+                    <input type='text' placeholder='email@email.com' className='input_news' id='input_news'></input>
                     <button className='btn btn-primary botao_news'>CADASTRAR</button>
                 </div>
             </div>

@@ -51,7 +51,7 @@ function CartProvider ({ children }) {
     function EnviarPedido () {
         const Pedido =
         {
-            comprador: {nome: 'Marcos', email: 'a@a', telefone: '89083091'},
+            comprador: {nome: 'Marcos Vilela', email: 'teste@emailteste.com.br', telefone: '(31) 99999 9999)'},
             itens: [...cart],
             total: cart.reduce((soma, preco) => soma + (preco.preco * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
         }
@@ -61,8 +61,8 @@ function CartProvider ({ children }) {
 
         addDoc(ordersCollection, Pedido)
             .then((doc) => {
-                setOrder(Pedido)
-                console.log("Pedido criado com sucesso: ", doc.id);
+                setOrder({ ...Pedido, id: doc.id })
+                console.log("Pedido criado e enviado ao firebase: ", doc.id);
             });
 
         setCart([])

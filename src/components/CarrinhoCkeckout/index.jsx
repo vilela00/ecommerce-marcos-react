@@ -15,7 +15,7 @@ function CarrinhoCheckout () {
             <div>
                 {cart.map((produto) => <CarrinhoItem produto={produto} key={produto.id} />)}
             </div>
-            <div id="valorTotal" className='valor_total'>
+            <div id="valorTotal1" className='valor_total'>
                 {cart != '' ? (
                     <div>
                         <div className='container_pag'>
