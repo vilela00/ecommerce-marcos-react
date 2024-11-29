@@ -9,8 +9,6 @@ import { NavLink, useParams } from "react-router-dom";
 
 function NavBar() {
   
-  const { tipo } = useParams()
-  
     return (
       <div>
         <BannerTop />
@@ -18,12 +16,12 @@ function NavBar() {
             <NavLink to={'/'}><img src = {logo} className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} /></NavLink>
             <nav>
                 <ul className="lista_menu">
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CAMISA</button></NavLink></li>
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>BERMUDA</button></NavLink></li>
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>TENIS</button></NavLink></li>
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CASACO</button></NavLink></li>
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>VERAO</button></NavLink></li>
-                    <li><NavLink to={`/categoria/${tipo}`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>INVERNO</button></NavLink></li>
+                    <li><NavLink to={`/categoria/macaquinho/`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>MACAQUINHO</button></NavLink></li>
+                    <li><NavLink to={`/categoria/vestido/`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>VESTIDO</button></NavLink></li>
+                    <li><NavLink to={`/categoria/blazer/`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>BLAZER</button></NavLink></li>
+                    <li><NavLink to={`/categoria/saia/`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>SAIA</button></NavLink></li>
+                    <li><NavLink to={`/categoria/camisa/`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CAMISA</button></NavLink></li>
+                    <li><NavLink to={`/categoria/cropped/`}><button className="botao_menu" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>CROPPED</button></NavLink></li>
                 </ul>
             </nav>
             

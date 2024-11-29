@@ -39,7 +39,7 @@ function ContainerInfoProduto () {
                     })
                 }
             });
-    }, [])
+    }, [produtoId])
 
     return (
         <div>

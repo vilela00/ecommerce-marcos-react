@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authors
+
+- [@marcosvilela](https://github.com/vilela00)
+
+# Ecommerce de moda
+
+Aplicação web funcional com adição ao carrinho, manipulação de quantidade, remoção, visualização de detalhe de produto, navegação por categoria, página de checkout e finalização de compra.
+
+## Tech Stack
+
+**Client:** React, Firebase

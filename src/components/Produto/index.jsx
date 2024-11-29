@@ -15,7 +15,7 @@ function Produto (props) {
 
     return (
         <div className = "produto container-fluid">
-            <button className="d-block"><img src = {name} onMouseOver={() => setName(props.produto.imagem2)} onMouseOut={() => setName(props.produto.imagem)} /></button>
+            <NavLink to={`/produto/${props.produto.id}`}><button className="d-block" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><img src = {name} onMouseOver={() => setName(props.produto.imagem2)} onMouseOut={() => setName(props.produto.imagem)} /></button></NavLink>
                 <div className="container_info">
                     <h5>{props.produto.titulo}</h5>
                     <div className="container_preco">

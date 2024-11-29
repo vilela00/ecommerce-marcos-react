@@ -40,7 +40,8 @@ const produtos = [
       precoAvista: 179.90,
       parcela: 19.90,
       quantidade: 1,
-      vitrine: 'principal'
+      vitrine: 'principal',
+      categoria: 'macaquinho'
     },
     {
       titulo: 'Saia Longa de Linho Premium',
@@ -51,7 +52,8 @@ const produtos = [
       precoAvista: 179.90,
       parcela: 19.90,
       quantidade: 1,
-      vitrine: 'principal'
+      vitrine: 'principal',
+      categoria: 'saia'
     },
     {
       titulo: 'Blazer Alfaiataria de Linho Premium',
@@ -62,7 +64,8 @@ const produtos = [
       precoAvista: 539.90,
       parcela: 59.90,
       quantidade: 1,
-      vitrine: 'principal'
+      vitrine: 'principal',
+      categoria: 'blazer'
     },
     {
       titulo: 'Vestido Longo de Malha Premium',
@@ -73,7 +76,8 @@ const produtos = [
       precoAvista: 269.90,
       parcela: 29.90,
       quantidade: 1,
-      vitrine: 'principal'
+      vitrine: 'principal',
+      categoria: 'vestido'
     },
     {
       titulo: 'Camisa de Linho Premium',
@@ -84,7 +88,8 @@ const produtos = [
       precoAvista: 179.90,
       parcela: 19.90,
       quantidade: 1,
-      vitrine: 'secundaria'
+      vitrine: 'secundaria',
+      categoria: 'camisa'
     },
     {
       titulo: 'Camisa Oversized Linho Premium',
@@ -95,7 +100,8 @@ const produtos = [
       precoAvista: 179.90,
       parcela: 19.90,
       quantidade: 1,
-      vitrine: 'secundaria'
+      vitrine: 'secundaria',
+      categoria: 'camisa'
     },
     {
       titulo: 'Macaquinho Curto de Linho premium',
@@ -106,7 +112,8 @@ const produtos = [
       precoAvista: 359.90,
       parcela: 39.90,
       quantidade: 1,
-      vitrine: 'secundaria'
+      vitrine: 'secundaria',
+      categoria: 'macaquinho'
     },
     {      
       titulo: 'Top Cropped de Amarracao Linho Premium',
@@ -117,12 +124,301 @@ const produtos = [
       precoAvista: 269.90,
       parcela: 29.90,
       quantidade: 1,
-      vitrine: 'secundaria'
-    }    
+      vitrine: 'secundaria',
+      categoria: 'cropped'
+    },
+    {
+      titulo: 'Macaquinho Curto com Bolsos',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/1.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/2.jpg?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'macaquinho'
+    },
+    {
+      titulo: 'Saia Longa de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/3.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/4.png?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'saia'
+    },
+    {
+      titulo: 'Blazer Alfaiataria de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/5.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/6.png?raw=true?raw=true",
+      preco: 599.90,
+      precoAvista: 539.90,
+      parcela: 59.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'blazer'
+    },
+    {
+      titulo: 'Vestido Longo de Malha Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/7.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/8.png?raw=true?raw=true",
+      preco: 299.90,
+      precoAvista: 269.90,
+      parcela: 29.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'vestido'
+    },
+    {
+      titulo: 'Camisa de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/1.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/2.jpg?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'camisa'
+    },
+    {
+      titulo: 'Camisa Oversized Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/3.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/4.png?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'camisa'
+    },
+    {
+      titulo: 'Macaquinho Curto de Linho premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/5.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/6.png?raw=true?raw=true",
+      preco: 399.90,
+      precoAvista: 359.90,
+      parcela: 39.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'macaquinho'
+    },
+    {      
+      titulo: 'Top Cropped de Amarracao Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/7.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/8.png?raw=true?raw=true",
+      preco: 299.90,
+      precoAvista: 269.90,
+      parcela: 29.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'cropped'
+    },
+    {
+      titulo: 'Macaquinho Curto com Bolsos',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/1.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/2.jpg?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'macaquinho'
+    },
+    {
+      titulo: 'Saia Longa de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/3.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/4.png?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'saia'
+    },
+    {
+      titulo: 'Blazer Alfaiataria de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/5.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/6.png?raw=true?raw=true",
+      preco: 599.90,
+      precoAvista: 539.90,
+      parcela: 59.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'blazer'
+    },
+    {
+      titulo: 'Vestido Longo de Malha Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/7.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/8.png?raw=true?raw=true",
+      preco: 299.90,
+      precoAvista: 269.90,
+      parcela: 29.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'vestido'
+    },
+    {
+      titulo: 'Camisa de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/1.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/2.jpg?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'camisa'
+    },
+    {
+      titulo: 'Camisa Oversized Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/3.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/4.png?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'camisa'
+    },
+    {
+      titulo: 'Macaquinho Curto de Linho premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/5.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/6.png?raw=true?raw=true",
+      preco: 399.90,
+      precoAvista: 359.90,
+      parcela: 39.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'macaquinho'
+    },
+    {      
+      titulo: 'Top Cropped de Amarracao Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/7.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/8.png?raw=true?raw=true",
+      preco: 299.90,
+      precoAvista: 269.90,
+      parcela: 29.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'cropped'
+    },
+    {
+      titulo: 'Macaquinho Curto com Bolsos',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/1.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/2.jpg?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'macaquinho'
+    },
+    {
+      titulo: 'Saia Longa de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/3.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/4.png?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'saia'
+    },
+    {
+      titulo: 'Blazer Alfaiataria de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/5.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/6.png?raw=true?raw=true",
+      preco: 599.90,
+      precoAvista: 539.90,
+      parcela: 59.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'blazer'
+    },
+    {
+      titulo: 'Vestido Longo de Malha Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/7.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/8.png?raw=true?raw=true",
+      preco: 299.90,
+      precoAvista: 269.90,
+      parcela: 29.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'vestido'
+    },
+    {
+      titulo: 'Camisa de Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/1.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/2.jpg?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'camisa'
+    },
+    {
+      titulo: 'Camisa Oversized Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/3.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/4.png?raw=true?raw=true",
+      preco: 199.90,
+      precoAvista: 179.90,
+      parcela: 19.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'camisa'
+    },
+    {
+      titulo: 'Macaquinho Curto de Linho premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/5.jpg?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/6.png?raw=true?raw=true",
+      preco: 399.90,
+      precoAvista: 359.90,
+      parcela: 39.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'macaquinho'
+    },
+    {      
+      titulo: 'Top Cropped de Amarracao Linho Premium',
+      descricao: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English.',
+      imagem: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/7.png?raw=true?raw=true",
+      imagem2: "https://github.com/vilela00/ecommerce-marcos-react/blob/master/src/components/img/8.png?raw=true?raw=true",
+      preco: 299.90,
+      precoAvista: 269.90,
+      parcela: 29.90,
+      quantidade: 1,
+      vitrine: '',
+      categoria: 'cropped'
+    }
   ]
 
 // console.log('firebase')
-// Popular a collection produtos
+// // Popular a collection produtos
 // produtos.forEach(async (obj) => {
 //   const docRef = await addDoc(collection(db, "produtos"), obj);
 //   console.log("Document written with ID: ", docRef.id);

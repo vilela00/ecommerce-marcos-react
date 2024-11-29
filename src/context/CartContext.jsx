@@ -51,7 +51,7 @@ function CartProvider ({ children }) {
     function EnviarPedido () {
         const Pedido =
         {
-            comprador: {nome: 'Marcos Vilela', email: 'teste@emailteste.com.br', telefone: '(31) 99999 9999)'},
+            comprador: {nome: 'Marcos Vilela', email: 'teste@emailteste.com.br', telefone: '(31) 99999 9999'},
             itens: [...cart],
             total: cart.reduce((soma, preco) => soma + (preco.preco * preco.quantidade), 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
         }
